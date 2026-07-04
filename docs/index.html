@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI 使用者人格测试</title>
   <meta name="description" content="10 个问题，测测你是哪一种 AI 使用者人格，并获得 7 天行动计划。" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=20260705-spotlight" />
 </head>
 <body>
   <main class="app" id="app">
@@ -42,10 +42,15 @@
       <div class="result-hero" id="resultHero">
         <div class="result-hero-bg"></div>
         <div class="result-hero-content">
-          <div class="result-label">你的 AI 使用者人格</div>
-          <h1 id="resultType"></h1>
-          <div class="stage-pill" id="stagePill"></div>
-          <p id="resultSub"></p>
+          <div class="result-spotlight">
+            <div class="spotlight-glow"></div>
+            <div class="result-label">你的测试结果</div>
+            <div class="result-mainline">
+              <h1 id="resultType"></h1>
+              <div class="stage-pill" id="stagePill"></div>
+            </div>
+            <p id="resultSub" class="result-sub"></p>
+          </div>
         </div>
       </div>
 
@@ -89,6 +94,6 @@
     </section>
   </main>
 
-  <script src="./app.js"></script>
+  <script src="./app.js?v=20260705-spotlight"></script>
 </body>
 </html>
