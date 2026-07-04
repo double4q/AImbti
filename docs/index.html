@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI 使用者人格测试</title>
+  <meta name="description" content="10 个问题，测测你是哪一种 AI 使用者人格，并获得 7 天行动计划。" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app" id="app">
+    <section class="hero" id="startScreen">
+      <div class="badge">AI MBTI · 轻量测试</div>
+      <h1>AI 使用者人格测试</h1>
+      <p class="subtitle">10 个问题，看看你现在最像哪一种 AI 使用者，以及接下来最适合怎么开始。</p>
+      <div class="hero-card">
+        <p>这个测试不看你“厉不厉害”，只帮你找到更适合自己的 AI 学习路线。</p>
+        <ul>
+          <li>⏱ 大约 2-3 分钟</li>
+          <li>🧭 输出人格类型与成长阶段</li>
+          <li>📅 附带 7 天行动计划</li>
+        </ul>
+      </div>
+      <button class="primary" id="startBtn">开始测试</button>
+    </section>
+
+    <section class="quiz hidden" id="quizScreen" aria-live="polite">
+      <div class="topbar">
+        <button class="ghost" id="backBtn" type="button">← 上一题</button>
+        <div class="progress-text"><span id="stepNow">1</span>/10</div>
+      </div>
+      <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+      <article class="question-card">
+        <p class="question-kicker" id="questionKicker">第 1 题</p>
+        <h2 id="questionTitle"></h2>
+        <p class="question-help" id="questionHelp"></p>
+        <div id="answerArea" class="answers"></div>
+      </article>
+    </section>
+
+    <section class="result hidden" id="resultScreen">
+      <div class="result-head">
+        <div class="badge">你的测试结果</div>
+        <h1 id="resultType"></h1>
+        <p id="resultSub"></p>
+      </div>
+
+      <div class="result-grid">
+        <article class="result-card wide">
+          <h3>人格关键词</h3>
+          <p id="keywords" class="keywords"></p>
+        </article>
+        <article class="result-card">
+          <h3>你的当前状态</h3>
+          <p id="currentState"></p>
+        </article>
+        <article class="result-card">
+          <h3>你的隐藏优势</h3>
+          <p id="advantage"></p>
+        </article>
+        <article class="result-card">
+          <h3>你最容易卡住的地方</h3>
+          <p id="blocker"></p>
+        </article>
+        <article class="result-card">
+          <h3>适合你的学习方向</h3>
+          <ol id="directions"></ol>
+        </article>
+        <article class="result-card wide">
+          <h3>7 天 AI 行动计划</h3>
+          <ol id="plan"></ol>
+        </article>
+        <article class="result-card wide">
+          <h3>推荐你优先尝试的 AI 工具</h3>
+          <ol id="tools"></ol>
+        </article>
+      </div>
+
+      <p class="quote" id="quote"></p>
+
+      <div class="actions">
+        <button class="primary" id="copyBtn">复制结果</button>
+        <button class="secondary" id="restartBtn">重新测试</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
