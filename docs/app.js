@@ -198,6 +198,29 @@ const typeInfo = {
   }
 };
 
+
+const typeThemes = {
+  'AI 新手村勇者': ['#22c55e', '#14b8a6'],
+  '提问小法师': ['#8b5cf6', '#ec4899'],
+  '效率加速侠': ['#2563eb', '#06b6d4'],
+  '灵感捕手': ['#f97316', '#f43f5e'],
+  '知识探险家': ['#0ea5e9', '#6366f1'],
+  '职场外挂玩家': ['#4f46e5', '#7c3aed'],
+  '工作流建筑师': ['#0f766e', '#2563eb'],
+  '自动化驯龙师': ['#111827', '#2563eb'],
+  '副业寻宝者': ['#f59e0b', '#ef4444'],
+  '创意导演型玩家': ['#db2777', '#7c3aed'],
+  '决策参谋官': ['#0f172a', '#b45309'],
+  'AI 斜杠探索家': ['#06b6d4', '#8b5cf6']
+};
+
+const stageEmoji = {
+  '萌芽期': '🌱',
+  '上手期': '🛠️',
+  '进阶期': '🚀',
+  '系统期': '🏗️'
+};
+
 const stageInfo = {
   '萌芽期': '刚开始接触 AI，还在建立基本认知。',
   '上手期': '已经用过 AI，但主要还是零散使用。',
@@ -309,7 +332,9 @@ function showResult() {
   $('quizScreen').classList.add('hidden');
   $('resultScreen').classList.remove('hidden');
 
-  $('resultType').textContent = `${result.type} · ${result.stage}`;
+  applyResultTheme(result.type);
+  $('resultType').textContent = result.type;
+  $('stagePill').textContent = `${stageEmoji[result.stage] || '✨'} ${result.stage}`;
   $('resultSub').textContent = `辅助人格：${result.secondary || '暂不明显'}｜${stageInfo[result.stage]}`;
   $('keywords').textContent = result.info.keywords.join('｜');
   $('currentState').textContent = result.info.state;
@@ -320,6 +345,24 @@ function showResult() {
   renderList('tools', result.info.tools);
   $('quote').textContent = result.info.quote;
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+function applyResultTheme(type) {
+  const [a, b] = typeThemes[type] || ['#2563eb', '#8b5cf6'];
+  const hero = $('resultHero');
+  hero.style.setProperty('--theme-a', a);
+  hero.style.setProperty('--theme-b', b);
+  hero.style.setProperty('--theme-shadow', `${hexToRgba(a, 0.32)}`);
+}
+
+function hexToRgba(hex, alpha) {
+  const normalized = hex.replace('#', '');
+  const bigint = parseInt(normalized, 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
 function renderList(id, items) {
