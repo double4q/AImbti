@@ -42,13 +42,13 @@ public/README.md
 文件上传后，完整 Prompt 的 Raw 链接通常是：
 
 ```text
-https://raw.githubusercontent.com/你的GitHub用户名/AImbti/main/public/ai-user-personality-test-prompt.md
+https://raw.githubusercontent.com/double4q/AImbti/main/public/ai-user-personality-test-prompt.md
 ```
 
 如果默认分支叫 `master`，则是：
 
 ```text
-https://raw.githubusercontent.com/你的GitHub用户名/AImbti/master/public/ai-user-personality-test-prompt.md
+https://raw.githubusercontent.com/double4q/AImbti/master/public/ai-user-personality-test-prompt.md
 ```
 
 ---
@@ -59,7 +59,7 @@ https://raw.githubusercontent.com/你的GitHub用户名/AImbti/master/public/ai-
 
 ```text
 请打开并阅读这个链接里的完整规则，然后严格按照它执行「AI 使用者人格测试」：
-https://raw.githubusercontent.com/你的GitHub用户名/AImbti/main/public/ai-user-personality-test-prompt.md
+https://raw.githubusercontent.com/double4q/AImbti/main/public/ai-user-personality-test-prompt.md
 
 现在请先用开场白开始，不要一次性问完 10 个问题。
 ```
@@ -71,7 +71,7 @@ https://raw.githubusercontent.com/你的GitHub用户名/AImbti/main/public/ai-us
 如果用户不是发给模型，而是自己查看，可以用普通页面链接：
 
 ```text
-https://github.com/你的GitHub用户名/AImbti/blob/main/public/ai-user-personality-test-prompt.md
+https://github.com/double4q/AImbti/blob/main/public/ai-user-personality-test-prompt.md
 ```
 
 但如果是让 AI 读取，优先使用 Raw 链接。

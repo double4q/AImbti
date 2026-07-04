@@ -6,7 +6,7 @@
 
 ```text
 请打开并阅读这个链接里的完整规则，然后严格按照它执行「AI 使用者人格测试」：
-https://raw.githubusercontent.com/你的GitHub用户名/AImbti/main/public/ai-user-personality-test-prompt.md
+https://raw.githubusercontent.com/double4q/AImbti/main/public/ai-user-personality-test-prompt.md
 
 现在请先用开场白开始，不要一次性问完 10 个问题。
 ```
